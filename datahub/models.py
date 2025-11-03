@@ -22,6 +22,7 @@ class Unit(models.Model):
     symbol = models.CharField(
         max_length=10,
     )
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
         if self.symbol:
@@ -35,6 +36,7 @@ class Sensor(models.Model):
         max_length=100,
     )
     unit = models.ForeignKey(Unit, on_delete=models.CASCADE)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
         return f"{self.name} [{self.code}]"
