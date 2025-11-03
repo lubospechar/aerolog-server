@@ -39,6 +39,7 @@ DJANGO_APPS = [
 
 THREEPARTY_APPS = [
     "rest_framework",
+    "rest_framework.authtoken",
 ]
 
 AEROLOG_APPS = [

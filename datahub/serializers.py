@@ -1,6 +1,6 @@
-# yourapp/serializers.py
+# datahub/serializers.py
 from rest_framework import serializers
-from .models import Sensor
+from datahub.models import Sensor
 
 class SensorSyncSerializer(serializers.ModelSerializer):
     class Meta:
