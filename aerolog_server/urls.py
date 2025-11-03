@@ -17,7 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from datahub.views import SensorSyncView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/sync/sensors/", SensorSyncView.as_view(), name="sensor-sync"),
 ]

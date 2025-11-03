@@ -37,11 +37,15 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
+THREEPARTY_APPS = [
+    "rest_framework",
+]
+
 AEROLOG_APPS = [
     'datahub'
 ]
 
-INSTALLED_APPS = DJANGO_APPS + AEROLOG_APPS
+INSTALLED_APPS = DJANGO_APPS + THREEPARTY_APPS + AEROLOG_APPS
 
 
 MIDDLEWARE = [
