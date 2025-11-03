@@ -1,12 +1,14 @@
 from django.utils.dateparse import parse_datetime
 from django.utils import timezone
 from rest_framework.generics import ListAPIView
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from .models import Sensor
 from .serializers import SensorSyncSerializer
 
 class SensorSyncView(ListAPIView):
     serializer_class = SensorSyncSerializer
+    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
