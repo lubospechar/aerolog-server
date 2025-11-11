@@ -17,9 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from datahub.views import SensorSyncView
+from datahub.views import SensorSyncView, UnitSyncView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/sync/sensors/", SensorSyncView.as_view(), name="sensor-sync"),
+    path("api/sync/units/", UnitSyncView.as_view(), name="unit-sync"),
 ]
